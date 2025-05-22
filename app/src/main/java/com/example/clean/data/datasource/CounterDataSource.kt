@@ -1,24 +1,24 @@
-    package com.example.clean.data.datasource
+package com.example.clean.data.datasource
 
-    import com.example.clean.data.model.CounterDto
+import com.example.clean.data.model.CounterDto
 
-    object CounterDataSource {
+class CounterDataSource {
 
-        private var count =0
-        private var typeOfOperation ="none"
+    private var count =0
+    private var typeOfOperation ="none"
 
-        fun increment(){
-            count++
-            typeOfOperation="increment"
-        }
-        fun decrement(){
-            count--
-            typeOfOperation="decrement"
-        }
-        fun getCount() : CounterDto{
-            return CounterDto(
-                count = count,
-                typeOfOperation = typeOfOperation
-            )
-        }
+    fun increment(){
+        count++
+        typeOfOperation="increment"
     }
+    fun decrement(){
+        count--
+        typeOfOperation="decrement"
+    }
+    fun getCount() : CounterDto{
+        return CounterDto(
+            count = count,
+            typeOfOperation = typeOfOperation
+        )
+    }
+}

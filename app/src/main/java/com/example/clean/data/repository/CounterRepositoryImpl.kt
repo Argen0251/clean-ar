@@ -6,9 +6,10 @@ import com.example.clean.data.mapper.toTypeOfOperation
 import com.example.clean.domain.model.Counter
 import com.example.clean.domain.repasitory.CounterRepository
 
-class CounterRepositoryImpl : CounterRepository {
+class CounterRepositoryImpl(
+    private val api :CounterDataSource) : CounterRepository {
 
-    private val api = CounterDataSource
+
     override fun increment() {
         api.increment()
     }
