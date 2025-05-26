@@ -17,11 +17,10 @@ class CharacterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
-        viewModel.character.observe(this) { ch ->
-            binding.tvName.text = ch.name
+        viewModel.character.observe(this) { character ->
+            binding.tvName.text = character.name
             Glide.with(this)
-                .load(ch.image)
-                .circleCrop()
+                .load(character.image)
                 .into(binding.ivAvatar)
         }
 
