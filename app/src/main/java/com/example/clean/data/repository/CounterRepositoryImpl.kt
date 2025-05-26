@@ -1,24 +1,13 @@
 package com.example.clean.data.repository
 
-import com.example.clean.data.datasource.CounterDataSource
-import com.example.clean.data.mapper.toCounter
-import com.example.clean.data.mapper.toTypeOfOperation
-import com.example.clean.domain.model.Counter
-import com.example.clean.domain.repasitory.CounterRepository
+import com.example.clean.data.datasource.CartoonApiService
+import com.example.clean.data.mapper.toDomain
+import com.example.clean.domain.model.Character
+import com.example.clean.domain.repasitory.CharacterRepository
 
-class CounterRepositoryImpl(
-    private val api :CounterDataSource) : CounterRepository {
-
-
-    override fun increment() {
-        api.increment()
-    }
-
-    override fun decrement() {
-        api.decrement()
-    }
-
-    override fun getCount(): Counter {
-        return api.getCount().toCounter()
-    }
+class CharacterRepositoryImpl(
+    private val api: CartoonApiService
+) : CharacterRepository {
+    override suspend fun getCharacter(): Character =
+        api.getCharacters().toDomain()
 }

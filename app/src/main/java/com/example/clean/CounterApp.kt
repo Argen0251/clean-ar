@@ -10,12 +10,10 @@ import org.koin.core.logger.Level
 class CounterApp : Application() {
     override fun onCreate() {
         super.onCreate()
-
         startKoin {
             androidContext(this@CounterApp)
             androidLogger(level = Level.DEBUG)
             modules(appModule)
         }
-
     }
 }
