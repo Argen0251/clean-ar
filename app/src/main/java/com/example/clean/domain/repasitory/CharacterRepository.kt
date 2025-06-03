@@ -1,7 +1,10 @@
 package com.example.clean.domain.repasitory
 
+import androidx.lifecycle.LiveData
 import com.example.clean.domain.model.Character
 
 interface CharacterRepository {
-    suspend fun getCharacter(): Character
+    fun getCharactersList(): LiveData<List<Character>>
+
+    fun getCharacterById(id: Int): LiveData<Character>
 }

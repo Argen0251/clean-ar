@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import com.example.clean.domain.model.Character
 import com.example.clean.domain.repasitory.CharacterRepository
 
-class GetCharacterUseCase(
+class GetCharacterListUseCase(
     private val repository: CharacterRepository
 ) {
-    operator fun invoke(id: Int): LiveData<Character> {
-        return repository.getCharacterById(id)
+    operator fun invoke(): LiveData<List<Character>> {
+        return repository.getCharactersList()
     }
 }
