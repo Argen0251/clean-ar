@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.clean.databinding.FragmentCharacterListBinding
-import com.example.clean.presentation.activity.CharacterAdapter
-import com.example.clean.presentation.activity.CharacterListViewModel
+import com.example.clean.presentation.fragment.CharacterAdapter
+import com.example.clean.presentation.fragment.CharacterListViewModel
 import com.example.clean.presentation.activity.MainActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

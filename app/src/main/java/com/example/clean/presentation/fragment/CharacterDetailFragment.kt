@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.clean.databinding.FragmentCharacterDetailBinding
-import com.example.clean.presentation.activity.CharacterDetailViewModel
+import com.example.clean.presentation.fragment.CharacterDetailViewModel
 import org.koin.androidx.viewmodel.ext.android.stateViewModel
 import org.koin.core.parameter.parametersOf
 
