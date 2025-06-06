@@ -18,8 +18,7 @@ val networkModule = module {
     single { provideOkHttpClient(get()) }
     single { provideRetrofit(get()) }
     single<CartoonApiService> { provideAppService(get()) }
-    single<CharacterRepository> { CharacterRepositoryImpl(api = get(),) }
-    single<CharacterRepository> { CharacterRepositoryImpl(get()) }
+    single<CharacterRepository> { CharacterRepositoryImpl(api = get()) }
 }
 fun provideRetrofit(
     okHttpClient: OkHttpClient
