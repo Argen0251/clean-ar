@@ -2,7 +2,7 @@ package com.example.clean.presentation.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.clean.R                                // ← импорт R вашего пакета
+import com.example.clean.R
 import com.example.clean.databinding.ActivityMainBinding
 import com.example.clean.presentation.fragment.CharacterDetailFragment
 import com.example.clean.presentation.fragment.CharacterListFragment
