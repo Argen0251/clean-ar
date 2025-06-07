@@ -8,7 +8,8 @@ import org.koin.dsl.module
 val presentationModule = module {
     viewModel {
         CharacterListViewModel(
-            getCharacterListUseCase = get()
+            getCharacterListUseCase     = get(),
+            getCharactersPagingUseCase  = get()
         )
     }
 
